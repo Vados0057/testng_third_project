@@ -16,7 +16,6 @@ public class CarvanaHomePageTest extends CarvanaBase {
     public void setPage() {
         carvanaHomePage = new CarvanaHomePage();
         carvanaSearchCarPage = new CarvanaSearchCarPage();
-        SoftAssert softAssert = new SoftAssert();
     }
 
     /**
@@ -155,7 +154,6 @@ public class CarvanaHomePageTest extends CarvanaBase {
 
         Waiter.pause(2);
         Assert.assertTrue(driver.getCurrentUrl().contains(TestData.searchCar));
-        String priceResult;
         for (int i = 0; i < carvanaSearchCarPage.carImages.size(); i++) {
             Assert.assertTrue(carvanaSearchCarPage.carImages.get(i).isDisplayed());
             Assert.assertTrue(carvanaSearchCarPage.favoriteButton.get(i).isDisplayed());
